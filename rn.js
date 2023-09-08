@@ -6,6 +6,7 @@ let accesskey="WJMixad46MNMxjj7Dme3fXwTaT7EuFqWTfmXtYcyPo8";
 let page=1;
 async function search(){
   
+  
   let key=input.value;
 try{
   const url=`https://api.unsplash.com/search/photos?page=${page}&query=${key}&client_id=${accesskey}`
@@ -28,10 +29,9 @@ try{
     div.appendChild(imagelink);
   });
   more.style.display ="block"
-}
+  }
   catch(e){
-    alert(`couldn't find ${key} image`)
-          
+    alert(`Could not find ${key} pic`)
   }
 }
 form.addEventListener("submit", (e)=>{
