@@ -27,9 +27,11 @@ try{
     imagelink.appendChild(image);
     div.appendChild(imagelink);
   });
-  more.style.display ="block"}
+  more.style.display ="block"
+}
   catch(e){
-    alert(`couldn't find ${key} image`}
+    alert(`couldn't find ${key} image`)
+          
   }
 }
 form.addEventListener("submit", (e)=>{
