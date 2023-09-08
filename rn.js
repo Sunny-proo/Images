@@ -7,7 +7,7 @@ let page=1;
 async function search(){
   
   let key=input.value;
-
+try{
   const url=`https://api.unsplash.com/search/photos?page=${page}&query=${key}&client_id=${accesskey}`
   
   const response=await fetch(url);
@@ -27,7 +27,10 @@ async function search(){
     imagelink.appendChild(image);
     div.appendChild(imagelink);
   });
-  more.style.display ="block"
+  more.style.display ="block"}
+  catch(e){
+    alert(`couldn't find ${key} image`}
+  }
 }
 form.addEventListener("submit", (e)=>{
   e.preventDefault();
